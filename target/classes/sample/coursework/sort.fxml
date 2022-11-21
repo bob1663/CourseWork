@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: F5D3ED;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.coursework.SortController">
+    <children>
+        <AnchorPane layoutY="88.0" prefHeight="312.0" prefWidth="700.0" style="-fx-background-color: A7A7EB;">
+            <children>
+                <Label layoutX="568.0" layoutY="282.0" prefHeight="10.0" prefWidth="118.0" text="\@Gameroom, Vitaliy Mitnichuk inc. 2022">
+                    <font>
+                        <Font size="7.0" />
+                    </font>
+                </Label>
+                <Label fx:id="actionLabel" layoutX="338.0" layoutY="14.0" text="Your room">
+                    <font>
+                        <Font name="Segoe UI Black Italic" size="15.0" />
+                    </font>
+                </Label>
+                <Button fx:id="menuButton1" layoutX="323.0" layoutY="245.0" mnemonicParsing="false" onAction="#sort" prefHeight="37.0" prefWidth="109.0" style="-fx-border-radius: 14; -fx-background-color: CCA0E5;" text="Sort">
+                    <font>
+                        <Font name="Segoe UI Black Italic" size="12.0" />
+                    </font>
+                </Button>
+                <TextArea fx:id="infoField" layoutX="269.0" layoutY="35.0" prefHeight="200.0" prefWidth="217.0">
+                    <font>
+                        <Font name="Segoe UI Black Italic" size="12.0" />
+                    </font>
+                </TextArea>
+            </children>
+        </AnchorPane>
+        <Label layoutX="272.0" layoutY="30.0" text="Gameroom">
+            <font>
+                <Font name="Segoe UI Black Italic" size="28.0" />
+            </font>
+        </Label>
+        <Button fx:id="menuButton" layoutX="549.0" layoutY="30.0" mnemonicParsing="false" onAction="#menu" prefHeight="37.0" prefWidth="109.0" style="-fx-border-radius: 14; -fx-background-color: CCA0E5;" text="Menu">
+            <font>
+                <Font name="Segoe UI Black Italic" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.ChoiceBox?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: F5D3ED;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.coursework.AddController">
     <children>
         <AnchorPane layoutY="88.0" prefHeight="312.0" prefWidth="700.0" style="-fx-background-color: A7A7EB;">
@@ -15,13 +16,13 @@
                         <Font size="7.0" />
                     </font>
                 </Label>
-                <TextField fx:id="typeField" layoutX="59.0" layoutY="82.0" prefHeight="37.0" prefWidth="124.0" promptText="Type" />
+                <ChoiceBox fx:id="typeField" layoutX="59.0" layoutY="82.0" prefHeight="37.0" prefWidth="124.0"/>
                 <Button fx:id="addElement" layoutX="313.0" layoutY="185.0" mnemonicParsing="false" onAction="#addElement" prefHeight="37.0" prefWidth="75.0" style="-fx-background-color: CCCCFF;" text="Add">
                     <font>
                         <Font name="Segoe UI Black Italic" size="12.0" />
                     </font>
                 </Button>
-            <TextField fx:id="sizeField" layoutX="288.0" layoutY="82.0" prefHeight="37.0" prefWidth="124.0" promptText="Size" />
+            <ChoiceBox fx:id="sizeField" layoutX="288.0" layoutY="82.0" prefHeight="37.0" prefWidth="124.0" />
             <TextField fx:id="priceField" layoutX="506.0" layoutY="82.0" prefHeight="37.0" prefWidth="124.0" promptText="Price" />
             <Label layoutX="76.0" layoutY="60.0" text="Ball/Car/Doll/Plane">
                <font>

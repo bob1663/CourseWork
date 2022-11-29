@@ -15,7 +15,7 @@ import sample.coursework.toy.Toy;
 import java.io.IOException;
 import java.util.List;
 
-public class FindedElemController {
+public class FoundElemController {
 
     private Stage stage;
     private Scene scene;

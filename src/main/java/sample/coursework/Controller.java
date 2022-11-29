@@ -22,7 +22,7 @@ public class Controller {
 
     @FXML
     void make(ActionEvent event) throws IOException {
-        Manager.setBudget(100);
+        Manager.setBudget(500);
         Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

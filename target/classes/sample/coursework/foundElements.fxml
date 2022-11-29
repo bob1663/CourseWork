@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: F5D3ED;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.coursework.FindedElemController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: F5D3ED;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.coursework.FoundElemController">
     <children>
         <AnchorPane layoutY="88.0" prefHeight="312.0" prefWidth="700.0" style="-fx-background-color: A7A7EB;">
             <children>
@@ -15,7 +15,7 @@
                         <Font size="7.0" />
                     </font>
                 </Label>
-                <Label fx:id="actionLabel" layoutX="291.0" layoutY="14.0" text="Finded elements">
+                <Label fx:id="actionLabel" layoutX="291.0" layoutY="14.0" text="Found elements">
                     <font>
                         <Font name="Segoe UI Black Italic" size="15.0" />
                     </font>

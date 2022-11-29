@@ -1,8 +1,6 @@
 package sample.coursework.database;
 
-import sample.coursework.toy.Size;
 import sample.coursework.toy.Toy;
-import sample.coursework.toy.Type;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -41,7 +39,7 @@ public class DBHandler extends Configs {
             Statement prSt = getDbConnection().createStatement();
             ResultSet resultSet = prSt.executeQuery(query);
             while (resultSet.next()) {
-                Toys.add(new Toy(Type.valueOf(resultSet.getString(2)), Size.valueOf(resultSet.getString(3)), resultSet.getInt(4)));
+                Toys.add(new Toy(resultSet.getString(2), resultSet.getString(3), resultSet.getInt(4)));
             }
 
         } catch (SQLException e) {
@@ -75,6 +73,5 @@ public class DBHandler extends Configs {
     public static List<Toy> sortToys() {
         String gettoys = "SELECT * FROM gameroom order by price";
         return template(gettoys);
-
     }
 }

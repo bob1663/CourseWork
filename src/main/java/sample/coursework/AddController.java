@@ -3,10 +3,12 @@ package sample.coursework;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -14,20 +16,32 @@ import sample.coursework.database.DBHandler;
 import sample.coursework.toy.Manager;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AddController {
+public class AddController implements Initializable {
+    private String typeAnswer;
+
+    private String sizeAnswer;
+
     private Stage stage;
     private Scene scene;
     @FXML
     private Button addElement;
+
     @FXML
     private TextField priceField = new TextField();
     @FXML
-    private TextField sizeField = new TextField();
+    private ChoiceBox<String> sizeField = new ChoiceBox();
     @FXML
-    private TextField typeField = new TextField();
+    private ChoiceBox<String> typeField = new ChoiceBox();
+
     @FXML
     private Label budgetField = new Label();
+
+    private final String[] typeArr = {"ball","car","doll","plane"};
+
+    private final String[] sizeArr = {"big","medium","small"};
 
     @FXML
     void addElement(ActionEvent event) throws IOException {
@@ -37,7 +51,7 @@ public class AddController {
             openBudgetError(event);
         } else {
             budgetField.setText("Budget: " + Manager.getBudget());
-            dbHandler.addToy(typeField.getText(), sizeField.getText(),
+            dbHandler.addToy(typeAnswer, sizeAnswer,
                     Integer.parseInt(priceField.getText()));
         }
     }
@@ -57,4 +71,22 @@ public class AddController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        typeField.getItems().addAll(typeArr);
+        typeField.setOnAction(this::getType);
+        sizeField.getItems().addAll(sizeArr);
+        sizeField.setOnAction(this::getSize);
+        budgetField.setText("Budget: " + Manager.getBudget());
+    }
+
+    private void getType(ActionEvent actionEvent) {
+        typeAnswer = typeField.getValue();
+    }
+
+    private void getSize(ActionEvent actionEvent) {
+        sizeAnswer = sizeField.getValue();
+    }
 }
+

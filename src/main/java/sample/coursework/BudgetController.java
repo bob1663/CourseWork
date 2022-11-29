@@ -15,7 +15,7 @@ public class BudgetController {
 
     private Stage stage;
     private Scene scene;
-    private Parent root;
+
     @FXML
     private Button menuButton;
 
